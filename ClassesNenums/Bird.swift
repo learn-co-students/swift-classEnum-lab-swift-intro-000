@@ -8,7 +8,6 @@
 
 import Foundation
 
-
 enum Speed: Int{
     case slow = 1
     case medium
@@ -20,28 +19,24 @@ enum Speed: Int{
     }
 }
 
-
 enum Diet{
     case meatEater
     case vegetarian
-    
 }
 
 enum Sex{
     case male
     case female
-    
 }
-
 
 class Trex{
     
     var speed:Speed = Speed.fast
+    var isAlive:Bool = true
+
     let diet:Diet = Diet.meatEater
     let name:String
     let sex:Sex
-    
-    var isAlive:Bool = true
     
     init(name:String,sex:Sex){
         self.name = name
@@ -59,19 +54,3 @@ class Trex{
         otherTrex.isAlive = false
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
