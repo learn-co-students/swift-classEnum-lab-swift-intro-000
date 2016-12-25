@@ -9,24 +9,19 @@
 import Foundation
 
 enum Speed: Int{
-    case slow = 1
-    case medium
-    case fast
+    case slow = 1, medium, fast
     
     func isFaster(thanSpeed:Speed)->Bool{
-        
         return self.rawValue >= thanSpeed.rawValue
     }
 }
 
 enum Diet{
-    case meatEater
-    case vegetarian
+    case meatEater, vegetarian
 }
 
 enum Sex{
-    case male
-    case female
+    case male, female
 }
 
 class Trex{
@@ -46,6 +41,7 @@ class Trex{
     func speak()->String{
         return "ROAAAWWWWRRRRR!!!!!!"
     }
+    
     func isFaster(thanTrex:Trex)->Bool{
         return self.speed.rawValue > thanTrex.speed.rawValue
     }
