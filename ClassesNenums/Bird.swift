@@ -8,6 +8,61 @@
 
 import Foundation
 
+enum Speed: Int {
+    
+    case slow = 1, medium, fast
+    
+    
+    func isFaster(thanSpeed: Speed) -> Bool {
+        return self.rawValue >= thanSpeed.rawValue
+        
+    }
+}
+
+enum Diet {
+    
+    case meatEater, vegetarian
+    
+}
+
+enum Sex{
+    
+    case male, female
+}
+
+class Trex {
+    
+    var speed : Speed = .fast
+    var diet: Diet = .meatEater
+    var name: String
+    var sex: Sex
+    var isAlive: Bool = true
+    
+    init (name: String, sex: Sex) {
+        
+        self.name = name
+        self.sex = sex
+        
+    }
+    
+    func speak() -> String {
+        return "ROAAAWWWWRRRRR!!!!!!"
+    }
+    
+    func isFaster(thanTrex trex: Trex) -> Bool {
+        
+        return self.speed.isFaster(thanSpeed: trex.speed)
+    }
+
+    func eat(otherTrex trex: Trex) {
+        
+        if self.speed.isFaster(thanSpeed: trex.speed) {
+            return trex.isAlive = false
+        }
+    }
+
+
+}
 
 
 
