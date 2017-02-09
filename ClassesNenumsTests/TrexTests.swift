@@ -8,8 +8,7 @@
 
 
 
-import Quick
-import Nimble
+
 @testable import ClassesNenums
 
 class TrexSpec: QuickSpec {
