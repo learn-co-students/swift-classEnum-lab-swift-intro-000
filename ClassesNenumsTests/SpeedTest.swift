@@ -22,19 +22,19 @@ class SpeedSpec: QuickSpec {
                     
                     var otherSpeed = Speed.slow
                     
-                    let result = speed.isFaster(thanSpeed: otherSpeed)
+                    let result = speed.isFaster(thenSpeed: otherSpeed)
                     expect(result).to(beTrue())
                     
                     // changing otherSpeed to medium
                     otherSpeed = .medium
-                    let result2 = speed.isFaster(thanSpeed: otherSpeed)
+                    let result2 = speed.isFaster(thenSpeed: otherSpeed)
                     expect(result2).to(beTrue())
                     
                     
                     // changing speed to medium, otherSpeed to fast
                     speed = .medium
                     otherSpeed = .fast
-                    let result3 = speed.isFaster(thanSpeed: otherSpeed)
+                    let result3 = speed.isFaster(thenSpeed: otherSpeed)
                     expect(result3).to(beFalse())
                 }
             }
