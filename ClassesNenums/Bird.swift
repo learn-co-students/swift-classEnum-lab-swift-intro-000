@@ -8,8 +8,13 @@
 
 import Foundation
 
+enum Speed: Int {
+    case slow, medium, fast
+}
 
-
+class Bird {
+    func isFaster(
+}
 
 
 
